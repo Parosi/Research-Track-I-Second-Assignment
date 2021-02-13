@@ -8,21 +8,21 @@ In particular we have used the ROS navigation stack (implements the move_base al
 ### Robot Behaviors
 
 The robot can navigate in the enviroment via three algorithms: 
-<ul>
-<li> move_base <li>
-<li> bug0 <li> 
-<li> wall follow <li>
-</ul>
+
+* move_base 
+* bug0 
+* wall follow 
+
 
 The first two permit to reach a point, avoinding obstacles in the meanwhile. Instead, the third one (wall follow) simply makes the robot follow the walls. 
 
 Regarding move_base and bug0, the user can choose between four modes to set the coordinates of the target that the robot will reach:
-<ul>
-<li> manualPos <li>
-<li> manualRandom <li> 
-<li> autoPos <li>
-<li> autorandom <li>
-</ul>
+
+* manualPos 
+* manualRandom 
+* autoPos 
+* autorandom 
+
 
 **ManualPos** allows the user to insert the coordinates of one point between the following six:
 (-4,-3), (-4,2), (-4,7), (5,-7), (5,-3), (5,1)
