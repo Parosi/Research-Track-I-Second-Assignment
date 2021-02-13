@@ -48,33 +48,33 @@ As we have already written above, the developed code is inside the final_assignm
 The **RobotRandomPos.srv** is the custom service used by the above service node. It is composed by a request with fields: string *mode* (one of the four already cited) and two float32 (the coordinates inserted by the user if mode is one of the two manual, and otherwise zero). Its response has the same structure of the the request, so a string *result* ("ok" if the mode and the coordinates are correct and otherwise "errorn" where the n is a number that identifies which is the error) and two float32 (the resultant coordinates, either if them are right or wrong).
 
 **assignment_wall_follow_service_m.py** is a node that implements the wall follow algorithm. This is done via a finite state machine with the four following states:
-<ul>
-<li> find the wall <li>
-<li> turn left <li> 
-<li> follow the wall <li>
-<li> stop <li>
-</ul>
-It is also a publisher on topic */cmd_vel*, a subscriber to the topic */scan*, a client to the service */assignment_user_interface*. This client is used, in case that the variable *bug0_* is false (means that the algorithm is used alone and not from the bug0 algorithm), to send its state information to the user interface. As last thing, it is a server of the service *wall_follower_switch* too. The latter is used to start and stop the algorithm, via setting the value of the two variables *active_* and *bug0_*.
+
+* find the wall
+* turn left
+* follow the wall
+* stop 
+
+It is also a publisher on topic /cmd_vel, a subscriber to the topic /scan, a client to the service /assignment_user_interface. This client is used, in case that the variable bug0_ is false (means that the algorithm is used alone and not from the bug0 algorithm), to send its state information to the user interface. As last thing, it is a server of the service wall_follower_switch too. The latter is used to start and stop the algorithm, via setting the value of the two variables active_ and bug0_.
 
 The **FollowWallSwitch.srv** is the custom service used by the above node. It is composed by a request with two bool *active* and *bug0*, and as response it has a string *result* (feedback of the received request, usually with value "ok").
 
 **assignment_bug_m.py** is a node that implements the bug0 algorithm for reaching a point and avoiding obstacles (if any) in the meanwhile. This is done via a finite state machine with the four following states:
-<ul>
-<li> go to point <li>
-<li> wall following <li> 
-<li> stop/start <li>
-<li> timer expired <li>
-</ul>
-The fourth state is due to the fact that this algorithm can't always permit to the robot to reach the target, and in these cases it enters in an infinite path or gets stuck. So a timer is strictly needed, it is implemented via the difference between the *start_time_* (computed immediately after that it gets the new target position in the start state) and the time taken everytime it enters in the first or second state (go to point and wall following). After some tests, we have decided to set the timer to 5 minutes.
-It is also a publisher on topic */cmd_vel*, a subscriber to the topics */scan* and */odom*, and a client to the services */go_to_point_switch* and */wall_follower_switch*, which it uses to control the the associated nodes. *assignment_bug_m* is a client of */assignment_user_interface*. This client is used to send its state information to the user interface. As last thing, it is a server of the service *bug0_switch* too. The latter is a *SetBool* service, used to start and stop the algorithm, via setting the value of the variable *active_*.
+
+* go to point 
+* wall following 
+* stop/start 
+* timer expired 
+
+The fourth state is due to the fact that this algorithm can't always permit to the robot to reach the target, and in these cases it enters in an infinite path or gets stuck. So a timer is strictly needed, it is implemented via the difference between the start_time_ (computed immediately after that it gets the new target position in the start state) and the time taken everytime it enters in the first or second state (go to point and wall following). After some tests, we have decided to set the timer to 5 minutes.
+It is also a publisher on topic /cmd_vel, a subscriber to the topics /scan and /odom, and a client to the services /go_to_point_switch and /wall_follower_switch, which it uses to control the the associated nodes. assignment_bug_m is a client of /assignment_user_interface. This client is used to send its state information to the user interface. As last thing, it is a server of the service bug0_switch too. The latter is a SetBool service, used to start and stop the algorithm, via setting the value of the variable active_.
 
 **assignment_user_interface.py** is a node that implements a user interface to control the robot. It asks at the user to choose between the three algorithms. After that it shows the menu, that is equal and showed only for the two reaching point algorithm (move_base and bug0). In particular it has the already viewed modes, plus the stop command and the change algorithm command (which do exactly what they suggest). It prints, every two seconds and only when the robot moves, the following informaton:
-<ul>
-<li> the position of the robot, taken from the topic */odom* of which it is a subscriber <li>
-<li> the distance from the obstacle, divided in five regions (left, front-left, front, front-right, right), from the topic */scan* of which it is a subscriber <li> 
-<li> the robot status (with also the target position, if any), that depends on the algorithm choosen by the user. Because if the algorithm is the move_base it takes the status from the topic */move_base/status* of which it is a subscriber. This topic also provide the status in the case there are no possible path to reach the target (this could happen when using the random target mode, even if we have implemented the seven regions to avoid it). Instead, if the algorithm is bug0 or wall follow, the user interface takes the robot status from the requests that arrive to its own service called *assignment_user_interface*. We've done this choice, instead of a topic where the two algorithms (bug0 and wall follow) send messages, because we have seen these messages useful only for the user interface and not for other nodes. <li>
-</ul>
-The user interface is also a client to the service */robot_random_pos*, seen at the beginning of this paragraph, that returns the correct coordinates of the target point, these are, immediately after receiving, published on the topic */move_base/goal* (if the selected algorithm is move_base) on which the UI is a publisher or are saved in the ROS parameter server (if the selected algorithm is bug0).
+
+* the position of the robot, taken from the topic /odom of which it is a subscriber.
+* the distance from the obstacle, divided in five regions (left, front-left, front, front-right, right), from the topic /scan of which it is a subscriber.
+* the robot status (with also the target position, if any), that depends on the algorithm choosen by the user. Because if the algorithm is the move_base it takes the status from the topic /move_base/status of which it is a subscriber. This topic also provide the status in the case there are no possible path to reach the target (this could happen when using the random target mode, even if we have implemented the seven regions to avoid it). Instead, if the algorithm is bug0 or wall follow, the user interface takes the robot status from the requests that arrive to its own service called assignment_user_interface. We've done this choice, instead of a topic where the two algorithms (bug0 and wall follow) send messages, because we have seen these messages useful only for the user interface and not for other nodes. 
+
+The user interface is also a client to the service /robot_random_pos, seen at the beginning of this paragraph, that returns the correct coordinates of the target point, these are, immediately after receiving, published on the topic /move_base/goal (if the selected algorithm is move_base) on which the UI is a publisher or are saved in the ROS parameter server (if the selected algorithm is bug0).
 
 The **AssignmentUserInterface.srv** is the custom service used by the above node. It is composed by a request with fields: uint32 *mode* (that indicates the number of the status in which the client is) and one string *node* (which contains the name of the client, that could be bug0 or wall_follow). Its response is a string *result* (feedback of the received request, usually with value "ok").
 
