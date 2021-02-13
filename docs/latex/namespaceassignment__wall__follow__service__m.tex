@@ -1,0 +1,161 @@
+\hypertarget{namespaceassignment__wall__follow__service__m}{}\section{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m Namespace Reference}
+\label{namespaceassignment__wall__follow__service__m}\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceassignment__wall__follow__service__m_a6622ec7e139e0c7dc808bcec32739843}{wall\+\_\+follower\+\_\+switch} (req)
+\item 
+def \hyperlink{namespaceassignment__wall__follow__service__m_a034b7d3871fa0aed3175a05d05d28405}{clbk\+\_\+laser} (msg)
+\item 
+def \hyperlink{namespaceassignment__wall__follow__service__m_a0b1ad57ec76ad9ff34883a865e92fd5c}{change\+\_\+state} (state)
+\item 
+def \hyperlink{namespaceassignment__wall__follow__service__m_aa1aec1a0e12233bb423e93c5fe6a469d}{stop} ()
+\item 
+def \hyperlink{namespaceassignment__wall__follow__service__m_ad37d3c1bb41d16159633abb671f579e6}{take\+\_\+action} ()
+\item 
+def \hyperlink{namespaceassignment__wall__follow__service__m_a604c7f8ee14bc42dca58aeb06f1b1c4b}{find\+\_\+wall} ()
+\item 
+def \hyperlink{namespaceassignment__wall__follow__service__m_a96ade28a4099c7b97d72231fffa559d9}{turn\+\_\+left} ()
+\item 
+def \hyperlink{namespaceassignment__wall__follow__service__m_a03ebdb315996994bd54baa26b0975c5c}{follow\+\_\+the\+\_\+wall} ()
+\item 
+def \hyperlink{namespaceassignment__wall__follow__service__m_abf432a5355078536d7df8594eafafabf}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespaceassignment__wall__follow__service__m_af3942bab05dffdd5eabf2c01b1a5d4a4}{active\+\_\+} = False
+\item 
+bool \hyperlink{namespaceassignment__wall__follow__service__m_a05d2b068382c5cab51fb1ddcbf4bcc48}{bug0\+\_\+} = False
+\item 
+\hyperlink{namespaceassignment__wall__follow__service__m_aa3f39cbcae4d499f3050bdb59bd9e83a}{assignment\+\_\+user\+\_\+interface\+\_\+client} = rospy.\+Service\+Proxy(\textquotesingle{}/assignment\+\_\+user\+\_\+interface\textquotesingle{}, Assignment\+User\+Interface)
+\item 
+\hyperlink{namespaceassignment__wall__follow__service__m_a340558239f75efd920e0cbb49abd43e2}{pub\+\_\+} = None
+\item 
+dictionary \hyperlink{namespaceassignment__wall__follow__service__m_a8123bb7a16180e4dbac3a4fcce4fe2f6}{regions\+\_\+}
+\item 
+int \hyperlink{namespaceassignment__wall__follow__service__m_a587ec64501750fd3200e0b6edec6aea1}{state\+\_\+} = 0
+\item 
+dictionary \hyperlink{namespaceassignment__wall__follow__service__m_a94786d0623020a8a9d5b6e1cb6f85634}{state\+\_\+dict\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a0b1ad57ec76ad9ff34883a865e92fd5c}\label{namespaceassignment__wall__follow__service__m_a0b1ad57ec76ad9ff34883a865e92fd5c}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!change\+\_\+state@{change\+\_\+state}}
+\index{change\+\_\+state@{change\+\_\+state}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{change\+\_\+state()}{change\_state()}}
+{\footnotesize\ttfamily def assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+change\+\_\+state (\begin{DoxyParamCaption}\item[{}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a034b7d3871fa0aed3175a05d05d28405}\label{namespaceassignment__wall__follow__service__m_a034b7d3871fa0aed3175a05d05d28405}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!clbk\+\_\+laser@{clbk\+\_\+laser}}
+\index{clbk\+\_\+laser@{clbk\+\_\+laser}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{clbk\+\_\+laser()}{clbk\_laser()}}
+{\footnotesize\ttfamily def assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+clbk\+\_\+laser (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a604c7f8ee14bc42dca58aeb06f1b1c4b}\label{namespaceassignment__wall__follow__service__m_a604c7f8ee14bc42dca58aeb06f1b1c4b}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!find\+\_\+wall@{find\+\_\+wall}}
+\index{find\+\_\+wall@{find\+\_\+wall}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{find\+\_\+wall()}{find\_wall()}}
+{\footnotesize\ttfamily def assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+find\+\_\+wall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a03ebdb315996994bd54baa26b0975c5c}\label{namespaceassignment__wall__follow__service__m_a03ebdb315996994bd54baa26b0975c5c}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!follow\+\_\+the\+\_\+wall@{follow\+\_\+the\+\_\+wall}}
+\index{follow\+\_\+the\+\_\+wall@{follow\+\_\+the\+\_\+wall}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{follow\+\_\+the\+\_\+wall()}{follow\_the\_wall()}}
+{\footnotesize\ttfamily def assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+follow\+\_\+the\+\_\+wall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_abf432a5355078536d7df8594eafafabf}\label{namespaceassignment__wall__follow__service__m_abf432a5355078536d7df8594eafafabf}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!main@{main}}
+\index{main@{main}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_aa1aec1a0e12233bb423e93c5fe6a469d}\label{namespaceassignment__wall__follow__service__m_aa1aec1a0e12233bb423e93c5fe6a469d}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!stop@{stop}}
+\index{stop@{stop}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily def assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_ad37d3c1bb41d16159633abb671f579e6}\label{namespaceassignment__wall__follow__service__m_ad37d3c1bb41d16159633abb671f579e6}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!take\+\_\+action@{take\+\_\+action}}
+\index{take\+\_\+action@{take\+\_\+action}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{take\+\_\+action()}{take\_action()}}
+{\footnotesize\ttfamily def assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+take\+\_\+action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a96ade28a4099c7b97d72231fffa559d9}\label{namespaceassignment__wall__follow__service__m_a96ade28a4099c7b97d72231fffa559d9}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!turn\+\_\+left@{turn\+\_\+left}}
+\index{turn\+\_\+left@{turn\+\_\+left}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{turn\+\_\+left()}{turn\_left()}}
+{\footnotesize\ttfamily def assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+turn\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a6622ec7e139e0c7dc808bcec32739843}\label{namespaceassignment__wall__follow__service__m_a6622ec7e139e0c7dc808bcec32739843}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!wall\+\_\+follower\+\_\+switch@{wall\+\_\+follower\+\_\+switch}}
+\index{wall\+\_\+follower\+\_\+switch@{wall\+\_\+follower\+\_\+switch}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{wall\+\_\+follower\+\_\+switch()}{wall\_follower\_switch()}}
+{\footnotesize\ttfamily def assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+wall\+\_\+follower\+\_\+switch (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_af3942bab05dffdd5eabf2c01b1a5d4a4}\label{namespaceassignment__wall__follow__service__m_af3942bab05dffdd5eabf2c01b1a5d4a4}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!active\+\_\+@{active\+\_\+}}
+\index{active\+\_\+@{active\+\_\+}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{active\+\_\+}{active\_}}
+{\footnotesize\ttfamily bool assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+active\+\_\+ = False}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_aa3f39cbcae4d499f3050bdb59bd9e83a}\label{namespaceassignment__wall__follow__service__m_aa3f39cbcae4d499f3050bdb59bd9e83a}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!assignment\+\_\+user\+\_\+interface\+\_\+client@{assignment\+\_\+user\+\_\+interface\+\_\+client}}
+\index{assignment\+\_\+user\+\_\+interface\+\_\+client@{assignment\+\_\+user\+\_\+interface\+\_\+client}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{assignment\+\_\+user\+\_\+interface\+\_\+client}{assignment\_user\_interface\_client}}
+{\footnotesize\ttfamily assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+assignment\+\_\+user\+\_\+interface\+\_\+client = rospy.\+Service\+Proxy(\textquotesingle{}/assignment\+\_\+user\+\_\+interface\textquotesingle{}, Assignment\+User\+Interface)}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a05d2b068382c5cab51fb1ddcbf4bcc48}\label{namespaceassignment__wall__follow__service__m_a05d2b068382c5cab51fb1ddcbf4bcc48}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!bug0\+\_\+@{bug0\+\_\+}}
+\index{bug0\+\_\+@{bug0\+\_\+}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{bug0\+\_\+}{bug0\_}}
+{\footnotesize\ttfamily bool assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+bug0\+\_\+ = False}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a340558239f75efd920e0cbb49abd43e2}\label{namespaceassignment__wall__follow__service__m_a340558239f75efd920e0cbb49abd43e2}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!pub\+\_\+@{pub\+\_\+}}
+\index{pub\+\_\+@{pub\+\_\+}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{pub\+\_\+}{pub\_}}
+{\footnotesize\ttfamily assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+pub\+\_\+ = None}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a8123bb7a16180e4dbac3a4fcce4fe2f6}\label{namespaceassignment__wall__follow__service__m_a8123bb7a16180e4dbac3a4fcce4fe2f6}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!regions\+\_\+@{regions\+\_\+}}
+\index{regions\+\_\+@{regions\+\_\+}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{regions\+\_\+}{regions\_}}
+{\footnotesize\ttfamily dictionary assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+regions\+\_\+}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \{
+2     \textcolor{stringliteral}{'right'}: 0,
+3     \textcolor{stringliteral}{'fright'}: 0,
+4     \textcolor{stringliteral}{'front'}: 0,
+5     \textcolor{stringliteral}{'fleft'}: 0,
+6     \textcolor{stringliteral}{'left'}: 0,
+7 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a587ec64501750fd3200e0b6edec6aea1}\label{namespaceassignment__wall__follow__service__m_a587ec64501750fd3200e0b6edec6aea1}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
+{\footnotesize\ttfamily int assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+state\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__wall__follow__service__m_a94786d0623020a8a9d5b6e1cb6f85634}\label{namespaceassignment__wall__follow__service__m_a94786d0623020a8a9d5b6e1cb6f85634}} 
+\index{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}!state\+\_\+dict\+\_\+@{state\+\_\+dict\+\_\+}}
+\index{state\+\_\+dict\+\_\+@{state\+\_\+dict\+\_\+}!assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m@{assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m}}
+\subsubsection{\texorpdfstring{state\+\_\+dict\+\_\+}{state\_dict\_}}
+{\footnotesize\ttfamily dictionary assignment\+\_\+wall\+\_\+follow\+\_\+service\+\_\+m.\+state\+\_\+dict\+\_\+}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \{
+2     0: \textcolor{stringliteral}{'find the wall'},
+3     1: \textcolor{stringliteral}{'turn left'},
+4     2: \textcolor{stringliteral}{'follow the wall'},
+5     3: \textcolor{stringliteral}{'stop'}
+6 \}
+\end{DoxyCode}

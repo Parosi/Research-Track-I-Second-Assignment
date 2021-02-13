@@ -1,0 +1,202 @@
+\hypertarget{namespaceassignment__bug__m}{}\section{assignment\+\_\+bug\+\_\+m Namespace Reference}
+\label{namespaceassignment__bug__m}\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceassignment__bug__m_a29be5c4287b97f451ae70f28da8d44e7}{clbk\+\_\+odom} (msg)
+\item 
+def \hyperlink{namespaceassignment__bug__m_a3bba249d5aa299100d95a04b669ec678}{clbk\+\_\+laser} (msg)
+\item 
+def \hyperlink{namespaceassignment__bug__m_a60aea0f95c1f8227734d33b9d88c53ba}{send\+\_\+state} ()
+\item 
+def \hyperlink{namespaceassignment__bug__m_a36b72f9f3e85d1249a30af7fcb4047a4}{change\+\_\+state} (state)
+\item 
+def \hyperlink{namespaceassignment__bug__m_acdc531f4e1a9d7c370592a599fe91d32}{normalize\+\_\+angle} (angle)
+\item 
+def \hyperlink{namespaceassignment__bug__m_a68fc9be50b968f41b698d19482405fb2}{bug0\+\_\+switch} (req)
+\item 
+def \hyperlink{namespaceassignment__bug__m_ae5534780f8247d41cb25414aeb3772c2}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespaceassignment__bug__m_ac2f46e5bcf923cb96387041a0a56c645}{active\+\_\+} = False
+\item 
+\hyperlink{namespaceassignment__bug__m_a3f2cbd1887f7843f32fa76f089567795}{start\+\_\+time\+\_\+} = None
+\item 
+\hyperlink{namespaceassignment__bug__m_aa27a620a98a687c953ab4f6645d5d59c}{assignment\+\_\+user\+\_\+interface\+\_\+client} = rospy.\+Service\+Proxy(\textquotesingle{}/assignment\+\_\+user\+\_\+interface\textquotesingle{}, Assignment\+User\+Interface)
+\item 
+\hyperlink{namespaceassignment__bug__m_a13b5f431efdf1919d899550b61131a3c}{pub} = None
+\item 
+\hyperlink{namespaceassignment__bug__m_a4c470aefd9a2f667e787de8829811d28}{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+} = None
+\item 
+\hyperlink{namespaceassignment__bug__m_a4d22f21b5adbf26d3f5f02318dd9fa3d}{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+} = None
+\item 
+int \hyperlink{namespaceassignment__bug__m_a5471ee746a859bf9cd803018ee360113}{yaw\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__bug__m_a43c9c3a89b75b7b3397b872fabf2f6f6}{yaw\+\_\+error\+\_\+allowed\+\_\+} = 5 $\ast$ (math.\+pi / 180)
+\item 
+\hyperlink{namespaceassignment__bug__m_a816b933f822b6c4276424f950631bfdc}{position\+\_\+} = Point()
+\item 
+\hyperlink{namespaceassignment__bug__m_a0f9fae48bd10c19cdd214c396aa07322}{desired\+\_\+position\+\_\+} = Point()
+\item 
+\hyperlink{namespaceassignment__bug__m_a0362a6753095315fd584c87160fbf5ae}{x}
+\item 
+\hyperlink{namespaceassignment__bug__m_a7211c256cf5c4b5a31175d2e032e99d9}{y}
+\item 
+\hyperlink{namespaceassignment__bug__m_a7851458fa51f34d801ccbc8df90cf3c5}{z}
+\item 
+\hyperlink{namespaceassignment__bug__m_ac0d497fde4fce5d2323ab75d3351b503}{regions\+\_\+} = None
+\item 
+list \hyperlink{namespaceassignment__bug__m_a03c40af9fc8235737f6a11586237329d}{state\+\_\+desc\+\_\+} = \mbox{[}\textquotesingle{}Go to point\textquotesingle{}, \textquotesingle{}wall following\textquotesingle{}, \textquotesingle{}target reached\textquotesingle{}, \textquotesingle{}timer expired\textquotesingle{}\mbox{]}
+\item 
+int \hyperlink{namespaceassignment__bug__m_af631af3438fabcb2b5c436de8764adaa}{state\+\_\+} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceassignment__bug__m_a68fc9be50b968f41b698d19482405fb2}\label{namespaceassignment__bug__m_a68fc9be50b968f41b698d19482405fb2}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!bug0\+\_\+switch@{bug0\+\_\+switch}}
+\index{bug0\+\_\+switch@{bug0\+\_\+switch}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{bug0\+\_\+switch()}{bug0\_switch()}}
+{\footnotesize\ttfamily def assignment\+\_\+bug\+\_\+m.\+bug0\+\_\+switch (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a36b72f9f3e85d1249a30af7fcb4047a4}\label{namespaceassignment__bug__m_a36b72f9f3e85d1249a30af7fcb4047a4}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!change\+\_\+state@{change\+\_\+state}}
+\index{change\+\_\+state@{change\+\_\+state}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{change\+\_\+state()}{change\_state()}}
+{\footnotesize\ttfamily def assignment\+\_\+bug\+\_\+m.\+change\+\_\+state (\begin{DoxyParamCaption}\item[{}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a3bba249d5aa299100d95a04b669ec678}\label{namespaceassignment__bug__m_a3bba249d5aa299100d95a04b669ec678}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!clbk\+\_\+laser@{clbk\+\_\+laser}}
+\index{clbk\+\_\+laser@{clbk\+\_\+laser}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{clbk\+\_\+laser()}{clbk\_laser()}}
+{\footnotesize\ttfamily def assignment\+\_\+bug\+\_\+m.\+clbk\+\_\+laser (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a29be5c4287b97f451ae70f28da8d44e7}\label{namespaceassignment__bug__m_a29be5c4287b97f451ae70f28da8d44e7}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!clbk\+\_\+odom@{clbk\+\_\+odom}}
+\index{clbk\+\_\+odom@{clbk\+\_\+odom}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{clbk\+\_\+odom()}{clbk\_odom()}}
+{\footnotesize\ttfamily def assignment\+\_\+bug\+\_\+m.\+clbk\+\_\+odom (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_ae5534780f8247d41cb25414aeb3772c2}\label{namespaceassignment__bug__m_ae5534780f8247d41cb25414aeb3772c2}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!main@{main}}
+\index{main@{main}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def assignment\+\_\+bug\+\_\+m.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_acdc531f4e1a9d7c370592a599fe91d32}\label{namespaceassignment__bug__m_acdc531f4e1a9d7c370592a599fe91d32}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!normalize\+\_\+angle@{normalize\+\_\+angle}}
+\index{normalize\+\_\+angle@{normalize\+\_\+angle}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{normalize\+\_\+angle()}{normalize\_angle()}}
+{\footnotesize\ttfamily def assignment\+\_\+bug\+\_\+m.\+normalize\+\_\+angle (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a60aea0f95c1f8227734d33b9d88c53ba}\label{namespaceassignment__bug__m_a60aea0f95c1f8227734d33b9d88c53ba}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!send\+\_\+state@{send\+\_\+state}}
+\index{send\+\_\+state@{send\+\_\+state}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{send\+\_\+state()}{send\_state()}}
+{\footnotesize\ttfamily def assignment\+\_\+bug\+\_\+m.\+send\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceassignment__bug__m_ac2f46e5bcf923cb96387041a0a56c645}\label{namespaceassignment__bug__m_ac2f46e5bcf923cb96387041a0a56c645}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!active\+\_\+@{active\+\_\+}}
+\index{active\+\_\+@{active\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{active\+\_\+}{active\_}}
+{\footnotesize\ttfamily bool assignment\+\_\+bug\+\_\+m.\+active\+\_\+ = False}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_aa27a620a98a687c953ab4f6645d5d59c}\label{namespaceassignment__bug__m_aa27a620a98a687c953ab4f6645d5d59c}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!assignment\+\_\+user\+\_\+interface\+\_\+client@{assignment\+\_\+user\+\_\+interface\+\_\+client}}
+\index{assignment\+\_\+user\+\_\+interface\+\_\+client@{assignment\+\_\+user\+\_\+interface\+\_\+client}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{assignment\+\_\+user\+\_\+interface\+\_\+client}{assignment\_user\_interface\_client}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+assignment\+\_\+user\+\_\+interface\+\_\+client = rospy.\+Service\+Proxy(\textquotesingle{}/assignment\+\_\+user\+\_\+interface\textquotesingle{}, Assignment\+User\+Interface)}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a0f9fae48bd10c19cdd214c396aa07322}\label{namespaceassignment__bug__m_a0f9fae48bd10c19cdd214c396aa07322}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!desired\+\_\+position\+\_\+@{desired\+\_\+position\+\_\+}}
+\index{desired\+\_\+position\+\_\+@{desired\+\_\+position\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{desired\+\_\+position\+\_\+}{desired\_position\_}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+desired\+\_\+position\+\_\+ = Point()}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a816b933f822b6c4276424f950631bfdc}\label{namespaceassignment__bug__m_a816b933f822b6c4276424f950631bfdc}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!position\+\_\+@{position\+\_\+}}
+\index{position\+\_\+@{position\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{position\+\_\+}{position\_}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+position\+\_\+ = Point()}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a13b5f431efdf1919d899550b61131a3c}\label{namespaceassignment__bug__m_a13b5f431efdf1919d899550b61131a3c}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!pub@{pub}}
+\index{pub@{pub}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{pub}{pub}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+pub = None}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_ac0d497fde4fce5d2323ab75d3351b503}\label{namespaceassignment__bug__m_ac0d497fde4fce5d2323ab75d3351b503}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!regions\+\_\+@{regions\+\_\+}}
+\index{regions\+\_\+@{regions\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{regions\+\_\+}{regions\_}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+regions\+\_\+ = None}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a4c470aefd9a2f667e787de8829811d28}\label{namespaceassignment__bug__m_a4c470aefd9a2f667e787de8829811d28}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+@{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+}}
+\index{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+@{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+}{srv\_client\_go\_to\_point\_}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+srv\+\_\+client\+\_\+go\+\_\+to\+\_\+point\+\_\+ = None}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a4d22f21b5adbf26d3f5f02318dd9fa3d}\label{namespaceassignment__bug__m_a4d22f21b5adbf26d3f5f02318dd9fa3d}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+@{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+}}
+\index{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+@{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+}{srv\_client\_wall\_follower\_}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+srv\+\_\+client\+\_\+wall\+\_\+follower\+\_\+ = None}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a3f2cbd1887f7843f32fa76f089567795}\label{namespaceassignment__bug__m_a3f2cbd1887f7843f32fa76f089567795}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!start\+\_\+time\+\_\+@{start\+\_\+time\+\_\+}}
+\index{start\+\_\+time\+\_\+@{start\+\_\+time\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{start\+\_\+time\+\_\+}{start\_time\_}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+start\+\_\+time\+\_\+ = None}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_af631af3438fabcb2b5c436de8764adaa}\label{namespaceassignment__bug__m_af631af3438fabcb2b5c436de8764adaa}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
+{\footnotesize\ttfamily int assignment\+\_\+bug\+\_\+m.\+state\+\_\+ = 2}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a03c40af9fc8235737f6a11586237329d}\label{namespaceassignment__bug__m_a03c40af9fc8235737f6a11586237329d}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!state\+\_\+desc\+\_\+@{state\+\_\+desc\+\_\+}}
+\index{state\+\_\+desc\+\_\+@{state\+\_\+desc\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{state\+\_\+desc\+\_\+}{state\_desc\_}}
+{\footnotesize\ttfamily list assignment\+\_\+bug\+\_\+m.\+state\+\_\+desc\+\_\+ = \mbox{[}\textquotesingle{}Go to point\textquotesingle{}, \textquotesingle{}wall following\textquotesingle{}, \textquotesingle{}target reached\textquotesingle{}, \textquotesingle{}timer expired\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a0362a6753095315fd584c87160fbf5ae}\label{namespaceassignment__bug__m_a0362a6753095315fd584c87160fbf5ae}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!x@{x}}
+\index{x@{x}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+x}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a7211c256cf5c4b5a31175d2e032e99d9}\label{namespaceassignment__bug__m_a7211c256cf5c4b5a31175d2e032e99d9}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!y@{y}}
+\index{y@{y}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+y}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a5471ee746a859bf9cd803018ee360113}\label{namespaceassignment__bug__m_a5471ee746a859bf9cd803018ee360113}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!yaw\+\_\+@{yaw\+\_\+}}
+\index{yaw\+\_\+@{yaw\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{yaw\+\_\+}{yaw\_}}
+{\footnotesize\ttfamily int assignment\+\_\+bug\+\_\+m.\+yaw\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a43c9c3a89b75b7b3397b872fabf2f6f6}\label{namespaceassignment__bug__m_a43c9c3a89b75b7b3397b872fabf2f6f6}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!yaw\+\_\+error\+\_\+allowed\+\_\+@{yaw\+\_\+error\+\_\+allowed\+\_\+}}
+\index{yaw\+\_\+error\+\_\+allowed\+\_\+@{yaw\+\_\+error\+\_\+allowed\+\_\+}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{yaw\+\_\+error\+\_\+allowed\+\_\+}{yaw\_error\_allowed\_}}
+{\footnotesize\ttfamily int assignment\+\_\+bug\+\_\+m.\+yaw\+\_\+error\+\_\+allowed\+\_\+ = 5 $\ast$ (math.\+pi / 180)}
+
+\mbox{\Hypertarget{namespaceassignment__bug__m_a7851458fa51f34d801ccbc8df90cf3c5}\label{namespaceassignment__bug__m_a7851458fa51f34d801ccbc8df90cf3c5}} 
+\index{assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}!z@{z}}
+\index{z@{z}!assignment\+\_\+bug\+\_\+m@{assignment\+\_\+bug\+\_\+m}}
+\subsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily assignment\+\_\+bug\+\_\+m.\+z}
+

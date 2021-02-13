@@ -1,0 +1,308 @@
+\hypertarget{namespaceassignment__user__interface}{}\section{assignment\+\_\+user\+\_\+interface Namespace Reference}
+\label{namespaceassignment__user__interface}\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceassignment__user__interface_ae90fd67c15d84a2575d124d9238cf7f6}{print\+\_\+odom} (odometry)
+\item 
+def \hyperlink{namespaceassignment__user__interface_a249d47742744baac8863e4879d2fb194}{print\+\_\+obstacle\+\_\+distance} (scan)
+\item 
+def \hyperlink{namespaceassignment__user__interface_ae614cd2ec833af936cee545db6346780}{select\+\_\+algorithm} ()
+\item 
+def \hyperlink{namespaceassignment__user__interface_a84f6d19bde89c7e5c70cbfbfb0d4cbe9}{select\+\_\+command} ()
+\item 
+def \hyperlink{namespaceassignment__user__interface_aa5f3245814403aa62b6b67df83325402}{stop\+\_\+robot} ()
+\item 
+def \hyperlink{namespaceassignment__user__interface_a9b4df06215c60583814ac704d4072dba}{print\+\_\+move\+\_\+base\+\_\+state} (goal\+Status)
+\item 
+def \hyperlink{namespaceassignment__user__interface_ac83d08c7321d1e842f4da43c047f286c}{print\+\_\+bug0\+Wall\+\_\+state} (assignment\+User\+Interface)
+\item 
+def \hyperlink{namespaceassignment__user__interface_a6919be12c76c558bd0deed9cb434d66c}{request\+\_\+target} ()
+\item 
+def \hyperlink{namespaceassignment__user__interface_a865406d5310c5f253a4746dbc64bb298}{send\+\_\+new\+\_\+target} (x, y)
+\item 
+def \hyperlink{namespaceassignment__user__interface_af987e7fa29104f69b6953a02f48fceae}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceassignment__user__interface_aad88459a092ebc2d4fee4bf1e1337b5e}{goal\+\_\+pub} = rospy.\+Publisher(\textquotesingle{}/move\+\_\+base/goal\textquotesingle{}, Move\+Base\+Action\+Goal, queue\+\_\+size = 10)
+\item 
+\hyperlink{namespaceassignment__user__interface_a6cc7b5f702a16a13476486104efcd2a3}{robot\+\_\+random\+\_\+pos\+\_\+client} = rospy.\+Service\+Proxy(\textquotesingle{}/robot\+\_\+random\+\_\+pos\textquotesingle{}, Robot\+Random\+Pos)
+\item 
+\hyperlink{namespaceassignment__user__interface_ab525e4785013b455a7980ed1ba63714e}{wall\+\_\+follower\+\_\+client} = rospy.\+Service\+Proxy(\textquotesingle{}/wall\+\_\+follower\+\_\+switch\textquotesingle{}, Follow\+Wall\+Switch)
+\item 
+\hyperlink{namespaceassignment__user__interface_a8a670e78862fa183bc048efc9d22052a}{bug0\+\_\+client} = rospy.\+Service\+Proxy(\textquotesingle{}bug0\+\_\+switch\textquotesingle{}, Set\+Bool)
+\item 
+\hyperlink{namespaceassignment__user__interface_aff3436412ba56471e20393affeacf07e}{odom\+\_\+sub} = None
+\item 
+\hyperlink{namespaceassignment__user__interface_a13b07208a0d16bf7cacbc7f406d55a96}{laser\+\_\+sub} = None
+\item 
+\hyperlink{namespaceassignment__user__interface_af33582718e5b57327c67b7d635e1b03e}{move\+\_\+base\+\_\+status\+\_\+sub} = None
+\item 
+int \hyperlink{namespaceassignment__user__interface_a83ab99f37eebd687c37e0aa02f9f3e8d}{odom\+\_\+count\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_a371f1e7966a361df34dd57d69996b9fc}{scan\+\_\+count\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_abf6717fba99f4ab68964800a70d0b644}{move\+\_\+base\+\_\+count\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_a76779c4f5d75c01e4e1f4c6267b7a4fa}{bug0\+\_\+count\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_a01e008cb67a46d4333ebe27c5c3f4e53}{wall\+\_\+follow\+\_\+count\+\_\+} = 0
+\item 
+bool \hyperlink{namespaceassignment__user__interface_aa01834f44f4e44650321fbb9663f67da}{active\+\_\+odom\+\_\+} = False
+\item 
+bool \hyperlink{namespaceassignment__user__interface_a70dc1cee92d2270ab06ead1271c932e9}{active\+\_\+distance\+\_\+from\+\_\+obstacle\+\_\+} = False
+\item 
+bool \hyperlink{namespaceassignment__user__interface_ab7e770bcccc99063ed51ef1d5df1d9ed}{active\+\_\+move\+\_\+base\+\_\+} = False
+\item 
+int \hyperlink{namespaceassignment__user__interface_a91f5626e7955992e66a7bd0cac0a7952}{previous\+\_\+odom\+\_\+x\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_a7a311707e9b36a72fc254f7341c575f2}{previous\+\_\+odom\+\_\+y\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_ab600fa7c306af18fef9abdbe3cabdb29}{previous\+\_\+odom\+\_\+yaw\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_aa342342bb685561d0a4f86e3f8cebd9b}{previous\+\_\+move\+\_\+base\+\_\+state\+\_\+} = 1
+\item 
+int \hyperlink{namespaceassignment__user__interface_ad74ea24b9efe2549557256c0090ce5df}{previous\+\_\+bug0\+\_\+state\+\_\+} = 1
+\item 
+int \hyperlink{namespaceassignment__user__interface_aedad6b3f62bcb3c38ace17c74827840b}{target\+\_\+x\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_a5a022bdefa93bc3cff83f4df7886f8d4}{target\+\_\+y\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_ad60bfd8d9b50d535c32d8d0119fba104}{algorithm\+\_\+} = 0
+\item 
+int \hyperlink{namespaceassignment__user__interface_ab9cd545379c69c3aef5bf1db2d78e5ea}{reach\+\_\+mode\+\_\+} = 0
+\item 
+dictionary \hyperlink{namespaceassignment__user__interface_a1e414fbd95047464af11df1505f17bdb}{previous\+\_\+regions\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceassignment__user__interface_af987e7fa29104f69b6953a02f48fceae}\label{namespaceassignment__user__interface_af987e7fa29104f69b6953a02f48fceae}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!main@{main}}
+\index{main@{main}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_ac83d08c7321d1e842f4da43c047f286c}\label{namespaceassignment__user__interface_ac83d08c7321d1e842f4da43c047f286c}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!print\+\_\+bug0\+Wall\+\_\+state@{print\+\_\+bug0\+Wall\+\_\+state}}
+\index{print\+\_\+bug0\+Wall\+\_\+state@{print\+\_\+bug0\+Wall\+\_\+state}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{print\+\_\+bug0\+Wall\+\_\+state()}{print\_bug0Wall\_state()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+print\+\_\+bug0\+Wall\+\_\+state (\begin{DoxyParamCaption}\item[{}]{assignment\+User\+Interface }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a9b4df06215c60583814ac704d4072dba}\label{namespaceassignment__user__interface_a9b4df06215c60583814ac704d4072dba}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!print\+\_\+move\+\_\+base\+\_\+state@{print\+\_\+move\+\_\+base\+\_\+state}}
+\index{print\+\_\+move\+\_\+base\+\_\+state@{print\+\_\+move\+\_\+base\+\_\+state}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{print\+\_\+move\+\_\+base\+\_\+state()}{print\_move\_base\_state()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+print\+\_\+move\+\_\+base\+\_\+state (\begin{DoxyParamCaption}\item[{}]{goal\+Status }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a249d47742744baac8863e4879d2fb194}\label{namespaceassignment__user__interface_a249d47742744baac8863e4879d2fb194}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!print\+\_\+obstacle\+\_\+distance@{print\+\_\+obstacle\+\_\+distance}}
+\index{print\+\_\+obstacle\+\_\+distance@{print\+\_\+obstacle\+\_\+distance}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{print\+\_\+obstacle\+\_\+distance()}{print\_obstacle\_distance()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+print\+\_\+obstacle\+\_\+distance (\begin{DoxyParamCaption}\item[{}]{scan }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_ae90fd67c15d84a2575d124d9238cf7f6}\label{namespaceassignment__user__interface_ae90fd67c15d84a2575d124d9238cf7f6}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!print\+\_\+odom@{print\+\_\+odom}}
+\index{print\+\_\+odom@{print\+\_\+odom}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{print\+\_\+odom()}{print\_odom()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+print\+\_\+odom (\begin{DoxyParamCaption}\item[{}]{odometry }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a6919be12c76c558bd0deed9cb434d66c}\label{namespaceassignment__user__interface_a6919be12c76c558bd0deed9cb434d66c}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!request\+\_\+target@{request\+\_\+target}}
+\index{request\+\_\+target@{request\+\_\+target}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{request\+\_\+target()}{request\_target()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+request\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_ae614cd2ec833af936cee545db6346780}\label{namespaceassignment__user__interface_ae614cd2ec833af936cee545db6346780}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!select\+\_\+algorithm@{select\+\_\+algorithm}}
+\index{select\+\_\+algorithm@{select\+\_\+algorithm}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{select\+\_\+algorithm()}{select\_algorithm()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+select\+\_\+algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a84f6d19bde89c7e5c70cbfbfb0d4cbe9}\label{namespaceassignment__user__interface_a84f6d19bde89c7e5c70cbfbfb0d4cbe9}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!select\+\_\+command@{select\+\_\+command}}
+\index{select\+\_\+command@{select\+\_\+command}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{select\+\_\+command()}{select\_command()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+select\+\_\+command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a865406d5310c5f253a4746dbc64bb298}\label{namespaceassignment__user__interface_a865406d5310c5f253a4746dbc64bb298}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!send\+\_\+new\+\_\+target@{send\+\_\+new\+\_\+target}}
+\index{send\+\_\+new\+\_\+target@{send\+\_\+new\+\_\+target}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{send\+\_\+new\+\_\+target()}{send\_new\_target()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+send\+\_\+new\+\_\+target (\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_aa5f3245814403aa62b6b67df83325402}\label{namespaceassignment__user__interface_aa5f3245814403aa62b6b67df83325402}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!stop\+\_\+robot@{stop\+\_\+robot}}
+\index{stop\+\_\+robot@{stop\+\_\+robot}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{stop\+\_\+robot()}{stop\_robot()}}
+{\footnotesize\ttfamily def assignment\+\_\+user\+\_\+interface.\+stop\+\_\+robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceassignment__user__interface_a70dc1cee92d2270ab06ead1271c932e9}\label{namespaceassignment__user__interface_a70dc1cee92d2270ab06ead1271c932e9}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!active\+\_\+distance\+\_\+from\+\_\+obstacle\+\_\+@{active\+\_\+distance\+\_\+from\+\_\+obstacle\+\_\+}}
+\index{active\+\_\+distance\+\_\+from\+\_\+obstacle\+\_\+@{active\+\_\+distance\+\_\+from\+\_\+obstacle\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{active\+\_\+distance\+\_\+from\+\_\+obstacle\+\_\+}{active\_distance\_from\_obstacle\_}}
+{\footnotesize\ttfamily bool assignment\+\_\+user\+\_\+interface.\+active\+\_\+distance\+\_\+from\+\_\+obstacle\+\_\+ = False}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_ab7e770bcccc99063ed51ef1d5df1d9ed}\label{namespaceassignment__user__interface_ab7e770bcccc99063ed51ef1d5df1d9ed}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!active\+\_\+move\+\_\+base\+\_\+@{active\+\_\+move\+\_\+base\+\_\+}}
+\index{active\+\_\+move\+\_\+base\+\_\+@{active\+\_\+move\+\_\+base\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{active\+\_\+move\+\_\+base\+\_\+}{active\_move\_base\_}}
+{\footnotesize\ttfamily bool assignment\+\_\+user\+\_\+interface.\+active\+\_\+move\+\_\+base\+\_\+ = False}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_aa01834f44f4e44650321fbb9663f67da}\label{namespaceassignment__user__interface_aa01834f44f4e44650321fbb9663f67da}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!active\+\_\+odom\+\_\+@{active\+\_\+odom\+\_\+}}
+\index{active\+\_\+odom\+\_\+@{active\+\_\+odom\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{active\+\_\+odom\+\_\+}{active\_odom\_}}
+{\footnotesize\ttfamily bool assignment\+\_\+user\+\_\+interface.\+active\+\_\+odom\+\_\+ = False}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_ad60bfd8d9b50d535c32d8d0119fba104}\label{namespaceassignment__user__interface_ad60bfd8d9b50d535c32d8d0119fba104}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!algorithm\+\_\+@{algorithm\+\_\+}}
+\index{algorithm\+\_\+@{algorithm\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{algorithm\+\_\+}{algorithm\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+algorithm\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a8a670e78862fa183bc048efc9d22052a}\label{namespaceassignment__user__interface_a8a670e78862fa183bc048efc9d22052a}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!bug0\+\_\+client@{bug0\+\_\+client}}
+\index{bug0\+\_\+client@{bug0\+\_\+client}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{bug0\+\_\+client}{bug0\_client}}
+{\footnotesize\ttfamily assignment\+\_\+user\+\_\+interface.\+bug0\+\_\+client = rospy.\+Service\+Proxy(\textquotesingle{}bug0\+\_\+switch\textquotesingle{}, Set\+Bool)}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a76779c4f5d75c01e4e1f4c6267b7a4fa}\label{namespaceassignment__user__interface_a76779c4f5d75c01e4e1f4c6267b7a4fa}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!bug0\+\_\+count\+\_\+@{bug0\+\_\+count\+\_\+}}
+\index{bug0\+\_\+count\+\_\+@{bug0\+\_\+count\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{bug0\+\_\+count\+\_\+}{bug0\_count\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+bug0\+\_\+count\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_aad88459a092ebc2d4fee4bf1e1337b5e}\label{namespaceassignment__user__interface_aad88459a092ebc2d4fee4bf1e1337b5e}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!goal\+\_\+pub@{goal\+\_\+pub}}
+\index{goal\+\_\+pub@{goal\+\_\+pub}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{goal\+\_\+pub}{goal\_pub}}
+{\footnotesize\ttfamily assignment\+\_\+user\+\_\+interface.\+goal\+\_\+pub = rospy.\+Publisher(\textquotesingle{}/move\+\_\+base/goal\textquotesingle{}, Move\+Base\+Action\+Goal, queue\+\_\+size = 10)}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a13b07208a0d16bf7cacbc7f406d55a96}\label{namespaceassignment__user__interface_a13b07208a0d16bf7cacbc7f406d55a96}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!laser\+\_\+sub@{laser\+\_\+sub}}
+\index{laser\+\_\+sub@{laser\+\_\+sub}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{laser\+\_\+sub}{laser\_sub}}
+{\footnotesize\ttfamily assignment\+\_\+user\+\_\+interface.\+laser\+\_\+sub = None}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_abf6717fba99f4ab68964800a70d0b644}\label{namespaceassignment__user__interface_abf6717fba99f4ab68964800a70d0b644}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!move\+\_\+base\+\_\+count\+\_\+@{move\+\_\+base\+\_\+count\+\_\+}}
+\index{move\+\_\+base\+\_\+count\+\_\+@{move\+\_\+base\+\_\+count\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{move\+\_\+base\+\_\+count\+\_\+}{move\_base\_count\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+move\+\_\+base\+\_\+count\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_af33582718e5b57327c67b7d635e1b03e}\label{namespaceassignment__user__interface_af33582718e5b57327c67b7d635e1b03e}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!move\+\_\+base\+\_\+status\+\_\+sub@{move\+\_\+base\+\_\+status\+\_\+sub}}
+\index{move\+\_\+base\+\_\+status\+\_\+sub@{move\+\_\+base\+\_\+status\+\_\+sub}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{move\+\_\+base\+\_\+status\+\_\+sub}{move\_base\_status\_sub}}
+{\footnotesize\ttfamily assignment\+\_\+user\+\_\+interface.\+move\+\_\+base\+\_\+status\+\_\+sub = None}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a83ab99f37eebd687c37e0aa02f9f3e8d}\label{namespaceassignment__user__interface_a83ab99f37eebd687c37e0aa02f9f3e8d}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!odom\+\_\+count\+\_\+@{odom\+\_\+count\+\_\+}}
+\index{odom\+\_\+count\+\_\+@{odom\+\_\+count\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{odom\+\_\+count\+\_\+}{odom\_count\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+odom\+\_\+count\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_aff3436412ba56471e20393affeacf07e}\label{namespaceassignment__user__interface_aff3436412ba56471e20393affeacf07e}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!odom\+\_\+sub@{odom\+\_\+sub}}
+\index{odom\+\_\+sub@{odom\+\_\+sub}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{odom\+\_\+sub}{odom\_sub}}
+{\footnotesize\ttfamily assignment\+\_\+user\+\_\+interface.\+odom\+\_\+sub = None}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_ad74ea24b9efe2549557256c0090ce5df}\label{namespaceassignment__user__interface_ad74ea24b9efe2549557256c0090ce5df}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!previous\+\_\+bug0\+\_\+state\+\_\+@{previous\+\_\+bug0\+\_\+state\+\_\+}}
+\index{previous\+\_\+bug0\+\_\+state\+\_\+@{previous\+\_\+bug0\+\_\+state\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{previous\+\_\+bug0\+\_\+state\+\_\+}{previous\_bug0\_state\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+previous\+\_\+bug0\+\_\+state\+\_\+ = 1}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_aa342342bb685561d0a4f86e3f8cebd9b}\label{namespaceassignment__user__interface_aa342342bb685561d0a4f86e3f8cebd9b}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!previous\+\_\+move\+\_\+base\+\_\+state\+\_\+@{previous\+\_\+move\+\_\+base\+\_\+state\+\_\+}}
+\index{previous\+\_\+move\+\_\+base\+\_\+state\+\_\+@{previous\+\_\+move\+\_\+base\+\_\+state\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{previous\+\_\+move\+\_\+base\+\_\+state\+\_\+}{previous\_move\_base\_state\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+previous\+\_\+move\+\_\+base\+\_\+state\+\_\+ = 1}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a91f5626e7955992e66a7bd0cac0a7952}\label{namespaceassignment__user__interface_a91f5626e7955992e66a7bd0cac0a7952}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!previous\+\_\+odom\+\_\+x\+\_\+@{previous\+\_\+odom\+\_\+x\+\_\+}}
+\index{previous\+\_\+odom\+\_\+x\+\_\+@{previous\+\_\+odom\+\_\+x\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{previous\+\_\+odom\+\_\+x\+\_\+}{previous\_odom\_x\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+previous\+\_\+odom\+\_\+x\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a7a311707e9b36a72fc254f7341c575f2}\label{namespaceassignment__user__interface_a7a311707e9b36a72fc254f7341c575f2}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!previous\+\_\+odom\+\_\+y\+\_\+@{previous\+\_\+odom\+\_\+y\+\_\+}}
+\index{previous\+\_\+odom\+\_\+y\+\_\+@{previous\+\_\+odom\+\_\+y\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{previous\+\_\+odom\+\_\+y\+\_\+}{previous\_odom\_y\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+previous\+\_\+odom\+\_\+y\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_ab600fa7c306af18fef9abdbe3cabdb29}\label{namespaceassignment__user__interface_ab600fa7c306af18fef9abdbe3cabdb29}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!previous\+\_\+odom\+\_\+yaw\+\_\+@{previous\+\_\+odom\+\_\+yaw\+\_\+}}
+\index{previous\+\_\+odom\+\_\+yaw\+\_\+@{previous\+\_\+odom\+\_\+yaw\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{previous\+\_\+odom\+\_\+yaw\+\_\+}{previous\_odom\_yaw\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+previous\+\_\+odom\+\_\+yaw\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a1e414fbd95047464af11df1505f17bdb}\label{namespaceassignment__user__interface_a1e414fbd95047464af11df1505f17bdb}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!previous\+\_\+regions\+\_\+@{previous\+\_\+regions\+\_\+}}
+\index{previous\+\_\+regions\+\_\+@{previous\+\_\+regions\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{previous\+\_\+regions\+\_\+}{previous\_regions\_}}
+{\footnotesize\ttfamily dictionary assignment\+\_\+user\+\_\+interface.\+previous\+\_\+regions\+\_\+}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \{
+2         \textcolor{stringliteral}{'right'}:  0,
+3         \textcolor{stringliteral}{'fright'}: 0,
+4         \textcolor{stringliteral}{'front'}:  0,
+5         \textcolor{stringliteral}{'fleft'}:  0,
+6         \textcolor{stringliteral}{'left'}:   0,
+7     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceassignment__user__interface_ab9cd545379c69c3aef5bf1db2d78e5ea}\label{namespaceassignment__user__interface_ab9cd545379c69c3aef5bf1db2d78e5ea}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!reach\+\_\+mode\+\_\+@{reach\+\_\+mode\+\_\+}}
+\index{reach\+\_\+mode\+\_\+@{reach\+\_\+mode\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{reach\+\_\+mode\+\_\+}{reach\_mode\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+reach\+\_\+mode\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a6cc7b5f702a16a13476486104efcd2a3}\label{namespaceassignment__user__interface_a6cc7b5f702a16a13476486104efcd2a3}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!robot\+\_\+random\+\_\+pos\+\_\+client@{robot\+\_\+random\+\_\+pos\+\_\+client}}
+\index{robot\+\_\+random\+\_\+pos\+\_\+client@{robot\+\_\+random\+\_\+pos\+\_\+client}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{robot\+\_\+random\+\_\+pos\+\_\+client}{robot\_random\_pos\_client}}
+{\footnotesize\ttfamily assignment\+\_\+user\+\_\+interface.\+robot\+\_\+random\+\_\+pos\+\_\+client = rospy.\+Service\+Proxy(\textquotesingle{}/robot\+\_\+random\+\_\+pos\textquotesingle{}, Robot\+Random\+Pos)}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a371f1e7966a361df34dd57d69996b9fc}\label{namespaceassignment__user__interface_a371f1e7966a361df34dd57d69996b9fc}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!scan\+\_\+count\+\_\+@{scan\+\_\+count\+\_\+}}
+\index{scan\+\_\+count\+\_\+@{scan\+\_\+count\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{scan\+\_\+count\+\_\+}{scan\_count\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+scan\+\_\+count\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_aedad6b3f62bcb3c38ace17c74827840b}\label{namespaceassignment__user__interface_aedad6b3f62bcb3c38ace17c74827840b}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!target\+\_\+x\+\_\+@{target\+\_\+x\+\_\+}}
+\index{target\+\_\+x\+\_\+@{target\+\_\+x\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{target\+\_\+x\+\_\+}{target\_x\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+target\+\_\+x\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a5a022bdefa93bc3cff83f4df7886f8d4}\label{namespaceassignment__user__interface_a5a022bdefa93bc3cff83f4df7886f8d4}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!target\+\_\+y\+\_\+@{target\+\_\+y\+\_\+}}
+\index{target\+\_\+y\+\_\+@{target\+\_\+y\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{target\+\_\+y\+\_\+}{target\_y\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+target\+\_\+y\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_a01e008cb67a46d4333ebe27c5c3f4e53}\label{namespaceassignment__user__interface_a01e008cb67a46d4333ebe27c5c3f4e53}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!wall\+\_\+follow\+\_\+count\+\_\+@{wall\+\_\+follow\+\_\+count\+\_\+}}
+\index{wall\+\_\+follow\+\_\+count\+\_\+@{wall\+\_\+follow\+\_\+count\+\_\+}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{wall\+\_\+follow\+\_\+count\+\_\+}{wall\_follow\_count\_}}
+{\footnotesize\ttfamily int assignment\+\_\+user\+\_\+interface.\+wall\+\_\+follow\+\_\+count\+\_\+ = 0}
+
+\mbox{\Hypertarget{namespaceassignment__user__interface_ab525e4785013b455a7980ed1ba63714e}\label{namespaceassignment__user__interface_ab525e4785013b455a7980ed1ba63714e}} 
+\index{assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}!wall\+\_\+follower\+\_\+client@{wall\+\_\+follower\+\_\+client}}
+\index{wall\+\_\+follower\+\_\+client@{wall\+\_\+follower\+\_\+client}!assignment\+\_\+user\+\_\+interface@{assignment\+\_\+user\+\_\+interface}}
+\subsubsection{\texorpdfstring{wall\+\_\+follower\+\_\+client}{wall\_follower\_client}}
+{\footnotesize\ttfamily assignment\+\_\+user\+\_\+interface.\+wall\+\_\+follower\+\_\+client = rospy.\+Service\+Proxy(\textquotesingle{}/wall\+\_\+follower\+\_\+switch\textquotesingle{}, Follow\+Wall\+Switch)}
+
