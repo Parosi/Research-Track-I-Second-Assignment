@@ -1,0 +1,4 @@
+bool active
+bool bug0
+---
+string result

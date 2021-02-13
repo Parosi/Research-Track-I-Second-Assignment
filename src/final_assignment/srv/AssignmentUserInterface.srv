@@ -1,0 +1,4 @@
+uint32 mode
+string node
+---
+string result

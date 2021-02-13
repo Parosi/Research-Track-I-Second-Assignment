@@ -1,0 +1,7 @@
+string mode
+float32 user_x
+float32 user_y
+---
+string result
+float32 result_x
+float32 result_y

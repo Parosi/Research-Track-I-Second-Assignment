@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+	
+    <!-- With this launch file we start the assignment_user_interface node and the robot_random_pos_server-->
+
+    <!-- ASSIGNMENT_USER_INTERFACE -->
+    <node pkg="final_assignment" type="assignment_user_interface.py" name="assignment_user_interface" output="screen" />
+
+    <!-- ROBOT_RANDOM_POS_SERVER -->
+    <node pkg="final_assignment" type="robot_random_pos_server.py" name="robot_random_pos_server" />
+
+</launch>
